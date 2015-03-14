@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>dcz.switcher.github.io</title>
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/knacss.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="line">
-        <h4>test area ...</h4>
-        <div class="center" ng-controller="MxSwitchboxController as mxSwitchCtrl">
-            <span>mx switchbox is {{mxSwitchCtrl.isShiny ? 'switched' : 'not switched'}}</span><div mx-switchbox switched='mxSwitchCtrl.isShiny'></div>
+    <div class="header">dcz.switcher.github.io</div>
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="index.html"><i class="fa fa-home fa-2x"></i></a></li><!--
+            --><li class="nav-list-item active"><a href="test_area.html"><i class="fa fa-flask fa-2x"></i></a></li><!--
+--><li class="nav-list-item"><a href="#"><i class="fa fa-bars fa-2x"></i></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="line">
+            <div class="center" ng-controller="MxSwitchboxController as mxSwitchCtrl">
+                <span>mx switchbox is {{mxSwitchCtrl.isShiny ? 'switched' : 'not switched'}}</span><div mx-switchbox switched='mxSwitchCtrl.isShiny'></div>
+            </div>
         </div>
     </div>
     <script src="js/libs/angular.min.js"></script>
