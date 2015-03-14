@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="DczApplication">
+<head>
+    <meta charset="UTF-8">
+    <title>dcz.switcher.github.io</title>
+    <link rel="stylesheet" href="css/knacss.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="line">
+        <h4>test area ...</h4>
+        <div class="center" ng-controller="MxSwitchboxController as mxSwitchCtrl">
+            <span>mx switchbox is {{mxSwitchCtrl.isShiny ? 'switched' : 'not switched'}}</span><div mx-switchbox switched='mxSwitchCtrl.isShiny'></div>
+        </div>
+    </div>
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/mx/mxSwitchbox.js"></script>
+    <script>
+        (function () {
+            var dczApplication = angular.module('DczApplication', ['mx']);
+
+            dczApplication.controller('MxSwitchboxController', [function () {
+                this.isShiny = true;
+            }]);
+        }());
+    </script>
+</body>
+</html>
