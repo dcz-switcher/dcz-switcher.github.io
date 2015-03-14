@@ -38,7 +38,7 @@
 }
 
 
-.nav-list-item:hover, .nav-list-item:active{
+.nav-list-item:active{
     background-color: #eee;
 }
 
