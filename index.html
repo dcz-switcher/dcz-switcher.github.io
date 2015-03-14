@@ -20,9 +20,45 @@
     <div class="content">
         <div ng-view></div>
     </div>
-    
+
+    <script src="js/vendors/raphael-min.js"></script>
+    <script>
+        var GLOBALS = {};
+        
+        GLOBALS.playFeedback = function () {
+            var posX = document.body.clientWidth / 2 - 250,
+                posY = document.body.clientHeight / 2,
+                paper = Raphael(posX, posY, 500, 500);
+
+            var circle = paper.circle(210, 195, 0).attr({"fill" : "#4caf50", "stroke": 0});
+
+            circle.animate({"r" : 100}, 500, "backOut", function () {
+                var check1 = paper.rect(150, 200, 60, 30).attr({"fill" : "#FFF", "stroke": 0}).transform("r45");
+                var check2 = paper.rect(163, 179, 120, 30).attr({"fill" : "#FFF", "stroke": 0}).transform("r315");
+                var rect1  = paper.rect(164, 184, 32, 62).attr({"fill" : "#4caf50", "stroke": 0}).transform("r135");
+                var rect2  = paper.rect(188, 167, 92, 32).attr({"fill" : "#4caf50", "stroke": 0}).transform("r135");
+
+                rect1.animate({"height" : 0}, 100, "linear", function () {
+                    rect2.animate({"width" : 0}, 100, "linear", function () {
+                        window.setTimeout(function () {
+                            rect1.remove();
+                            rect2.remove();
+                            check1.remove();
+                            check2.remove();
+                            circle.animate({"r" : 0}, 300, "backIn", function () {
+                                paper.remove();
+                            });
+                        }, 500);
+                    });
+                });
+            });
+        }
+    </script>    
+            
     <script src="js/vendors/angular.min.js"></script>
     <script src="js/vendors/angular-route.min.js"></script>
+    
+    <script src="js/src/controllers/controllers.js"></script>
     <script src="js/src/app.js"></script>
 </body>
 </html>

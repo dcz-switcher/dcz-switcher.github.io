@@ -1,5 +1,5 @@
 (function () {
-    angular.module('dczSite', ['ngRoute'])
+    angular.module('dczSite', ['ngRoute', 'controllers'])
     
     .config(function ($routeProvider) {
         $routeProvider
@@ -7,6 +7,8 @@
                 templateUrl: 'js/src/partials/home.html'
             })
             .when('/test_area', {
+                controller: 'testAreaController',
+                controllerAs: 'testAreaCtrl',
                 templateUrl: 'js/src/partials/test_area.html'
             })
             .when('/more', {

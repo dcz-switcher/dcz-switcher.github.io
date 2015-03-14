@@ -13,6 +13,17 @@
 
 }
 
+.btn{
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: .8em;
+}
+
+.btn:hover, .btn:active{
+    background-color: #eee;
+}
 
 .nav-list{
     list-style-type: none;
