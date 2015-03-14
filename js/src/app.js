@@ -15,5 +15,9 @@
             .otherwise({
                 redirectTo: '/home'
             })
-    });
+    })
+    
+    .controller('appController', ['$location', function ($location) {
+         this.location = $location;   
+    }]);
 }());
