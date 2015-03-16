@@ -33,14 +33,10 @@
 .nav-list-item{
     display: inline-block;
     vertical-align: middle;
-    width: 33.33%;
+    width: 25%;
     text-align: center;
 }
 
-
-.nav-list-item:active{
-    background-color: #eee;
-}
 
 .nav-list-item a{
     padding: 10px 0;

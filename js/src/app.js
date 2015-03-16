@@ -6,6 +6,9 @@
             .when('/home', {
                 templateUrl: 'js/src/partials/home.html'
             })
+            .when('/articles', {
+                templateUrl: 'js/src/partials/articles.html'
+            })
             .when('/test_area', {
                 controller: 'testAreaController',
                 controllerAs: 'testAreaCtrl',
