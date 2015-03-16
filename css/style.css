@@ -54,3 +54,50 @@
     padding: 10px;
     font-size: 1.4em;
 }
+
+
+.articles{
+    
+}
+
+
+.article{
+    width: 90%;
+    min-height: 110px;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 1px 5px 1px #c0c0c0;
+    -webkit-box-shadow: 0px 1px 5px 1px #c0c0c0;
+    -o-box-shadow: 0px 1px 5px 1px #c0c0c0;
+    box-shadow: 0px 1px 5px 1px #c0c0c0;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=180, Strength=5);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    display: table;
+    margin-bottom: 30px;
+}
+
+.article a{
+    text-decoration: none;
+    color: #3b3b3b;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 6px;
+    text-align: center;
+    
+}
+
+.article a:hover{
+    background-color: #4C86F9;
+    color: #fff;
+}
+
+.article-title{
+}
+
+
+.article-img{}
+
+
+.article-extrait{}
